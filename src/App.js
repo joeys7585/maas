@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+const API_BASE_URL = process.env.REACT_APP_API_URL;
+
+// Example:
+axios.get(`${API_BASE_URL}/api/menu`).then((response) => {
+	setMenu(response.data);
+});
 
 function App() {
 	const [menu, setMenu] = useState([]);
